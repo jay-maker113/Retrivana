@@ -1,0 +1,22 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Retrivana artifacts (large or regenerable)
+data/index/
+data/raw/
+
+# Editor and OS
+.vscode/
+Thumbs.db

@@ -1,0 +1,33 @@
+[project]
+name = "retrivana"
+version = "0.1.0"
+description = "Evaluated RAG question-answering service over the Python documentation"
+readme = "README.md"
+authors = [
+    { name = "jay-maker113", email = "148764979+jay-maker113@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "faiss-cpu>=1.15.1",
+    "fastapi>=0.143.0",
+    "google-genai>=2.29.0",
+    "numpy>=2.5.4",
+    "pydantic-settings>=2.15.0",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=6.1.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+retrivana = "retrivana:main"
+
+[build-system]
+requires = ["uv_build>=0.9.27,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
